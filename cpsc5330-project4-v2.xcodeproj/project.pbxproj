@@ -13,7 +13,9 @@
 		5C87250C2AFDA21600465C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87250A2AFDA21600465C68 /* Main.storyboard */; };
 		5C87250E2AFDA21800465C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C87250D2AFDA21800465C68 /* Assets.xcassets */; };
 		5C8725112AFDA21800465C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C87250F2AFDA21800465C68 /* LaunchScreen.storyboard */; };
-		5C87251B2AFDA41100465C68 /* diamond2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C87251A2AFDA41100465C68 /* diamond2.jpg */; };
+		5C8F24502AFEB6F000C8D37D /* AdventureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F244F2AFEB6F000C8D37D /* AdventureModel.swift */; };
+		5CCD8E702AFE02950064039F /* day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD8E6F2AFE02950064039F /* day.jpg */; };
+		5CCD8E722AFE051D0064039F /* diamond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CCD8E712AFE051D0064039F /* diamond.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		5C87250D2AFDA21800465C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C8725102AFDA21800465C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8725122AFDA21800465C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C87251A2AFDA41100465C68 /* diamond2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diamond2.jpg; sourceTree = "<group>"; };
+		5C8F244F2AFEB6F000C8D37D /* AdventureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureModel.swift; sourceTree = "<group>"; };
+		5CCD8E6F2AFE02950064039F /* day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day.jpg; sourceTree = "<group>"; };
+		5CCD8E712AFE051D0064039F /* diamond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diamond.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,8 @@
 		5C8725032AFDA21600465C68 /* cpsc5330-project4-v2 */ = {
 			isa = PBXGroup;
 			children = (
-				5C87251A2AFDA41100465C68 /* diamond2.jpg */,
+				5CCD8E712AFE051D0064039F /* diamond.jpg */,
+				5CCD8E6F2AFE02950064039F /* day.jpg */,
 				5C8725192AFDA25500465C68 /* View */,
 				5C8725182AFDA24400465C68 /* Model */,
 				5C8725042AFDA21600465C68 /* AppDelegate.swift */,
@@ -74,6 +79,7 @@
 		5C8725182AFDA24400465C68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C8F244F2AFEB6F000C8D37D /* AdventureModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,8 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CCD8E722AFE051D0064039F /* diamond.jpg in Resources */,
+				5CCD8E702AFE02950064039F /* day.jpg in Resources */,
 				5C8725112AFDA21800465C68 /* LaunchScreen.storyboard in Resources */,
-				5C87251B2AFDA41100465C68 /* diamond2.jpg in Resources */,
 				5C87250E2AFDA21800465C68 /* Assets.xcassets in Resources */,
 				5C87250C2AFDA21600465C68 /* Main.storyboard in Resources */,
 			);
@@ -160,6 +167,7 @@
 			files = (
 				5C8725092AFDA21600465C68 /* ViewController.swift in Sources */,
 				5C8725052AFDA21600465C68 /* AppDelegate.swift in Sources */,
+				5C8F24502AFEB6F000C8D37D /* AdventureModel.swift in Sources */,
 				5C8725072AFDA21600465C68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
