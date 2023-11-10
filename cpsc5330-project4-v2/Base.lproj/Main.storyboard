@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cpsc5330_project4_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="W1T-K3-kjh">
+                                <rect key="frame" x="10" y="54" width="394" height="832"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="30T-dT-rKM">
+                                        <rect key="frame" x="24" y="0.0" width="346.5" height="345.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hyG-KX-Mz1">
+                                                <rect key="frame" x="10" y="10" width="326.5" height="325.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="hyG-KX-Mz1" firstAttribute="centerY" secondItem="30T-dT-rKM" secondAttribute="centerY" id="8oY-1u-D2j"/>
+                                            <constraint firstAttribute="trailing" secondItem="hyG-KX-Mz1" secondAttribute="trailing" constant="10" id="B9d-4U-5hR"/>
+                                            <constraint firstItem="hyG-KX-Mz1" firstAttribute="leading" secondItem="30T-dT-rKM" secondAttribute="leading" constant="10" id="QwB-jb-3ka"/>
+                                            <constraint firstAttribute="bottom" secondItem="hyG-KX-Mz1" secondAttribute="bottom" constant="10" id="UG1-dw-d7g"/>
+                                            <constraint firstItem="hyG-KX-Mz1" firstAttribute="centerX" secondItem="30T-dT-rKM" secondAttribute="centerX" id="psd-QE-Djy"/>
+                                            <constraint firstItem="hyG-KX-Mz1" firstAttribute="top" secondItem="30T-dT-rKM" secondAttribute="top" constant="10" id="yfY-Hf-ZaB"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-6c-8l2" userLabel="StackViewQuestion">
+                                        <rect key="frame" x="20" y="346.5" width="354" height="276.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would be the best location to hide this treasure, the attic or the garage?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlb-Dw-LKY">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="276.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-j7-LO2" userLabel="StackViewButtons">
+                                        <rect key="frame" x="47" y="624" width="300" height="69"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPO-c1-s1F">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="69"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Attic">
+                                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rba-Tm-qW6">
+                                                <rect key="frame" x="155" y="0.0" width="145" height="69"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Garage">
+                                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Cbu-tZ-Pve"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfh-B3-Y0e" userLabel="StackViewMessageLabel">
+                                        <rect key="frame" x="123.5" y="694" width="147.5" height="138"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your choice." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXZ-cf-pXl">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="138"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nNN-6c-8l2" firstAttribute="height" secondItem="30T-dT-rKM" secondAttribute="height" multiplier="0.8" id="AQw-xJ-2sl"/>
+                                    <constraint firstAttribute="trailing" secondItem="nNN-6c-8l2" secondAttribute="trailing" constant="20" id="Gsl-eJ-K77"/>
+                                    <constraint firstItem="Zfh-B3-Y0e" firstAttribute="height" secondItem="30T-dT-rKM" secondAttribute="height" multiplier="0.4" id="Ov4-qC-Qtg"/>
+                                    <constraint firstItem="VUH-j7-LO2" firstAttribute="height" secondItem="30T-dT-rKM" secondAttribute="height" multiplier="0.2" id="Ywp-Bo-jOr"/>
+                                    <constraint firstItem="nNN-6c-8l2" firstAttribute="leading" secondItem="W1T-K3-kjh" secondAttribute="leading" constant="20" id="e8s-0r-h68"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W1T-K3-kjh" secondAttribute="trailing" constant="10" id="0TY-Hu-Ymx"/>
+                            <constraint firstAttribute="bottom" secondItem="W1T-K3-kjh" secondAttribute="bottom" constant="10" id="8LO-aW-qlt"/>
+                            <constraint firstItem="W1T-K3-kjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kPE-wU-0JV"/>
+                            <constraint firstItem="W1T-K3-kjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="xvO-JM-vfP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="atticButton" destination="uPO-c1-s1F" id="pFy-4G-ks9"/>
+                        <outlet property="garageButton" destination="rba-Tm-qW6" id="21q-JV-Mau"/>
+                        <outlet property="stackViewButtons" destination="VUH-j7-LO2" id="bBj-Ws-fvr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diamond2.jpg" width="326.5" height="213.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
