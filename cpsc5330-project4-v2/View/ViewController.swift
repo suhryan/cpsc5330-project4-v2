@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupLayer0()
         
-        
         // add 3rd button dynamically.
 //        let button3 = UIButton(type: .system)
 //        button3.setTitle("closet", for: .normal)
