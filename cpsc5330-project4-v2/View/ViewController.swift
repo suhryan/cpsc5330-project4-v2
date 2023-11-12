@@ -9,9 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // Variable to keep a reference to a dynamically added button for later removal
-    var buttonToRemove: UIButton? // to remove button later
-    
     // Outlets for UI components
     @IBOutlet weak var stackViewButtons: UIStackView!
     
@@ -27,45 +24,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayer0()
-        
-        // add 3rd button dynamically.
-//        let button3 = UIButton(type: .system)
-//        button3.setTitle("closet", for: .normal)
-//        button3.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        button3.layer.borderWidth = 2.0
-//        button3.layer.borderColor = UIColor.black.cgColor
-//        button3.setTitleColor(UIColor.black, for: .normal)
-//        stackViewButtons.addArrangedSubview(button3)
-//        buttonToRemove = button3 // keep reference to 3rd button for later removal
-//
-//        let button4 = UIButton(type: .system)
-//        button4.setTitle("closet", for: .normal)
-//        button4.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        button4.layer.borderWidth = 2.0
-//        button4.layer.borderColor = UIColor.black.cgColor
-//        button4.setTitleColor(UIColor.black, for: .normal)
-//        stackViewButtons.addArrangedSubview(button4)
-//        buttonToRemove = button4 // keep reference to 3rd button for later remova
-//
     }
 
-//    func removeButton() {
-//        buttonToRemove?.removeFromSuperview()
-//        buttonToRemove = nil // Clear the reference if we're done with the button
-//    }
-    
-    
-//    @IBAction func optionButton1Pressed(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func optionButton2Pressed(_ sender: UIButton) {
-//    }
-    
+
     // Function to set up the initial game state (Layer 0)
     private func setupLayer0() {
         gameTextLabel.text = model.layer0Text
         optionButton1.setTitle("Start Game", for: .normal)
+        optionButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
         optionButton2.isHidden = true  // Hide the second button
 
         // Setting up the target action for the 'Start Game' button
@@ -82,7 +49,10 @@ class ViewController: UIViewController {
     private func initializeGame() {
         gameTextLabel.text = model.initialText
         optionButton1.setTitle("Castle", for: .normal)
+        optionButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        
         optionButton2.setTitle("Forest", for: .normal)
+        optionButton2.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         optionButton1.isHidden = false
         optionButton2.isHidden = false
 
@@ -130,10 +100,16 @@ class ViewController: UIViewController {
         switch location {
         case .castle:
             optionButton1.setTitle("Hall", for: .normal)
+            optionButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+            
             optionButton2.setTitle("Dungeon", for: .normal)
+            optionButton2.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         case .forest:
             optionButton1.setTitle("River", for: .normal)
+            optionButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+            
             optionButton2.setTitle("Footprints", for: .normal)
+            optionButton2.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         }
     }
 
@@ -142,8 +118,11 @@ class ViewController: UIViewController {
         if model.currentLocation != nil && (model.castleChoice != nil || model.forestChoice != nil) {
             gameTextLabel.text = model.checkOutcome()
             optionButton1.setTitle("Restart", for: .normal)
+            optionButton1.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+            
             optionButton1.removeTarget(nil, action: nil, for: .allEvents)
             optionButton1.addTarget(self, action: #selector(restartGame), for: .touchUpInside)
+            
             optionButton2.isHidden = true // Hide the second button
         }
     }
